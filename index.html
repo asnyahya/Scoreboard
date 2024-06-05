@@ -17,6 +17,45 @@
     <title>Scoreboard</title>
   </head>
   <body>
+    <!-- Start Container -->
+    <section id="scoreboard">
+      <!-- Start colum -->
+      <div>
+        <!-- Player area -->
+        <div>
+          <h2>PLAYER 1</h2>
+          <p id="p1-display">0</p>
+          <div>
+            <button id="p1-button">+1</button>
+          </div>
+        </div>
+        <div>
+          <h2>PLAYER 2</h2>
+          <p id="p2-display">0</p>
+          <div>
+            <button id="p2-button">+1</button>
+          </div>
+        </div>
+        <!-- End player area -->
+
+        <div>
+          <select
+            name="scores"
+            id="scoreOption"
+          >
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+        <div>
+          <button id="reset">Reset</button>
+        </div>
+      </div>
+      <!-- End Column -->
+    </section>
+    <!-- End Container -->
+
     <!-- CDN Link -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
