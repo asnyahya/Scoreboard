@@ -14,45 +14,83 @@
       crossorigin="anonymous"
     />
     <!-- My Style -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
     <title>Scoreboard</title>
   </head>
   <body>
     <!-- Start Container -->
-    <section id="scoreboard">
+    <section
+      class="scoreboard container d-flex flex-column justify-content-center"
+    >
       <!-- Start colum -->
-      <div>
+      <div
+        class="row row-cols-1 row-cols-md-2 py-5 text-center justify-content-center"
+      >
         <!-- Player area -->
-        <div>
+        <div
+          class="points col col-auto py-3 d-flex flex-column align-items-center"
+        >
           <h2>PLAYER 1</h2>
-          <p id="p1-display">0</p>
-          <div>
-            <button id="p1-button">+1</button>
+          <p
+            class="px-3"
+            id="p1-display"
+          >
+            0
+          </p>
+          <div class="score-button">
+            <button
+              class="btn btn-primary"
+              id="p1-button"
+            >
+              +1
+            </button>
           </div>
         </div>
-        <div>
+        <div
+          class="points col col-auto py-3 d-flex flex-column align-items-center"
+        >
           <h2>PLAYER 2</h2>
-          <p id="p2-display">0</p>
-          <div>
-            <button id="p2-button">+1</button>
+          <p
+            class="px-3"
+            id="p2-display"
+          >
+            0
+          </p>
+          <div class="score-button">
+            <button
+              class="btn btn-primary"
+              id="p2-button"
+            >
+              +1
+            </button>
           </div>
         </div>
         <!-- End player area -->
-
-        <div>
-          <select
-            name="scores"
-            id="scoreOption"
-          >
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-          </select>
-        </div>
-        <div>
-          <button id="reset">Reset</button>
-        </div>
       </div>
       <!-- End Column -->
+
+      <div class="d-grid col-8 col-md-4 mx-auto pb-3">
+        <select
+          name="scores"
+          id="scoreOption"
+          class="form-select"
+        >
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+        </select>
+      </div>
+      <div class="d-grid col-4 col-md-2 mx-auto">
+        <button
+          class="btn btn-primary"
+          id="reset"
+        >
+          Reset
+        </button>
+      </div>
     </section>
     <!-- End Container -->
 
@@ -68,5 +106,6 @@
       crossorigin="anonymous"
     ></script>
     <!-- My Script -->
+    <script src="script.js"></script>
   </body>
 </html>
