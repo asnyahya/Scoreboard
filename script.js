@@ -11,6 +11,15 @@ let p2Score = 0;
 let isGameOver = false;
 let gamePoint = 5;
 
+// Fungsi untuk mereset permainan
+function reset() {
+  p1Score = 0;
+  p2Score = 0;
+  isGameOver = false;
+  p1Display.textContent = p1Score;
+  p2Display.textContent = p2Score;
+}
+
 // Menambahkan event klik pada player container
 pContainer.addEventListener('click', function (e) {
   const id = e.target.id;
@@ -33,4 +42,13 @@ pContainer.addEventListener('click', function (e) {
     }
     p2Display.textContent = p2Score;
   }
+});
+
+// Menambahkan event klik pada resetBtn dan jalankan fungsi reset saat reserBtn di klik
+resetBtn.addEventListener('click', reset);
+
+// Menambahkan event klik pada option
+option.addEventListener('change', function () {
+  gamePoint = parseInt(this.value); // Ubah gamePoint berdasarkan pilihan dan ubah jadi bilangan bulat
+  reset(); // Jalankan fungsi reset
 });
